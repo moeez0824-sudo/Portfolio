@@ -1,3 +1,11 @@
+/* Hide mobile hero row by default, show only on mobile */
+.hero-row-mobile { display: none; }
+.hero-desktop { display: block; }
+
+@media (max-width: 600px) {
+  .hero-row-mobile { display: flex !important; }
+  .hero-desktop { display: none !important; }
+}
 /* Mobile hero row and heading row for profile photo beside heading */
 .hero-row-mobile {
   display: flex;
