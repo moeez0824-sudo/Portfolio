@@ -1,3 +1,57 @@
+/* Mobile hero row and heading row for profile photo beside heading */
+.hero-row-mobile {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+.hero-heading-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 14px;
+}
+.hero-heading-row .hero-photo {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+  .hero-row-mobile {
+    flex-direction: column;
+  }
+  .hero-heading-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-row-mobile {
+    flex-direction: column;
+  }
+  .hero-heading-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .hero-heading-row .hero-photo {
+    width: 70px;
+    height: 70px;
+    min-width: 70px;
+    min-height: 70px;
+    margin-left: 10px;
+    margin-top: 0;
+    border-width: 3px;
+  }
+  .hero-heading-row h1 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+  }
+  .hero-content {
+    padding-top: 0;
+  }
+}
 /* Strict Project Grid Section */
 .project-grid-strict {
   display: grid;
