@@ -6,12 +6,14 @@
   <title>Muhammad Moeez | Developer Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="texture" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="spot spot-left" aria-hidden="true"></div>
+  <div class="spot spot-right" aria-hidden="true"></div>
 
   <header class="header" id="top">
     <nav class="container nav" aria-label="Main navigation">
@@ -35,131 +37,103 @@
 
       <a class="btn btn-ghost" href="#contact">Hire me</a>
     </nav>
+    <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
   </header>
 
   <main>
     <section class="hero container" id="home">
-      <!-- Desktop/Laptop Layout -->
-      <div class="hero-content reveal hero-desktop">
-        <p class="kicker">Developer Portfolio</p>
-        <h1>Building polished products with dependable code</h1>
+      <article class="profile-strip reveal" aria-label="Profile intro">
+        <figure class="hero-photo" aria-label="Profile image">
+          <img src="profile.jpeg" alt="Portrait of Muhammad Moeez" />
+        </figure>
+        <div class="profile-copy">
+          <p class="kicker">Muhammad Moeez</p>
+          <h2 class="profile-title">Building dependable web and AI products.</h2>
+          <p class="profile-text">I convert ideas into production ready products with clear strategy strong execution and dependable delivery.</p>
+        </div>
+      </article>
+
+      <div class="hero-main reveal">
+        <p class="kicker">Developer Profile</p>
+        <h1>Building polished products <br class="mobile-heading-break" />with dependable code</h1>
         <p class="hero-description">
-          I design and develop web and AI-powered solutions that are fast, clear, and ready for real-world use. I focus on clean architecture, strong UX, and measurable impact.
-          I build interfaces that remain consistent across different devices and screen sizes.
-          I write maintainable code so projects are easier to scale and improve over time.
-          I optimize performance to keep applications smooth, responsive, and user-friendly.
-          I integrate APIs and automation workflows to simplify complex business processes.
-          I value clear communication, reliable delivery, and long-term product quality.
-          I enjoy turning ideas into practical software that creates real outcomes.
+          I design and build modern and reliable web experiences powered by practical AI integration. My focus is clean architecture intuitive user experience and measurable business outcomes.
+          I create responsive interfaces that remain consistent across devices and I write maintainable code that supports long term growth.
+          From API integration to automation workflows I build solutions that simplify operations and improve efficiency.
+          I prioritize clear communication dependable delivery and lasting product quality.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">Explore projects</a>
           <a class="btn btn-outline" href="https://github.com/moeez0824-sudo" target="_blank" rel="noopener noreferrer">GitHub</a>
         </div>
+
+        <div class="hero-laptop-extra" aria-label="Laptop highlights">
+          <p class="extra-head">Quick Highlights</p>
+          <article>
+            <h3>Product Thinking</h3>
+            <p>From idea to execution with clear scope and practical delivery.</p>
+          </article>
+          <article>
+            <h3>Performance Focus</h3>
+            <p>Fast interfaces, clean architecture, and long-term maintainability.</p>
+          </article>
+          <article>
+            <h3>Reliability</h3>
+            <p>9+ completed projects and consistent delivery-driven workflow.</p>
+          </article>
+        </div>
       </div>
-      <div class="hero-side hero-desktop">
-        <figure class="hero-photo reveal" aria-label="Profile image">
-          <img src="profile.jpeg" alt="Portrait of Muhammad Moeez" />
-        </figure>
-        <aside class="hero-panel reveal" aria-label="Quick profile details">
+
+      <aside class="identity-card reveal" aria-label="Quick profile details">
+        <div class="identity-head">
           <p class="panel-head">Current Focus</p>
           <h2 id="rotatingRole">Front-End Engineering</h2>
-          <ul>
-            <li><i class="fa-solid fa-circle-check"></i> Responsive interface systems</li>
-            <li><i class="fa-solid fa-circle-check"></i> AI features and automation</li>
-            <li><i class="fa-solid fa-circle-check"></i> Product-grade development</li>
-          </ul>
-          <div class="stats-grid">
-            <article>
-              <p class="stat-value">9+</p>
-              <p class="stat-label">Completed projects</p>
-            </article>
-            <article>
-              <p class="stat-value">5+</p>
-              <p class="stat-label">Primary languages</p>
-            </article>
-            <article>
-              <p class="stat-value">100%</p>
-              <p class="stat-label">Delivery focus</p>
-            </article>
-          </div>
-        </aside>
-      </div>
-      <!-- Mobile Layout -->
-      <div class="hero-row-mobile">
-        <div class="hero-content reveal">
-          <div class="hero-heading-row">
-            <div>
-              <p class="kicker">Developer Portfolio</p>
-              <h1>Building polished products with dependable code</h1>
-            </div>
-            <figure class="hero-photo reveal" aria-label="Profile image">
-              <img src="profile.jpeg" alt="Portrait of Muhammad Moeez" />
-            </figure>
-          </div>
-          <p class="hero-description">
-            I design and develop web and AI-powered solutions that are fast, clear, and ready for real-world use. I focus on clean architecture, strong UX, and measurable impact.
-            I build interfaces that remain consistent across different devices and screen sizes.
-            I write maintainable code so projects are easier to scale and improve over time.
-            I optimize performance to keep applications smooth, responsive, and user-friendly.
-            I integrate APIs and automation workflows to simplify complex business processes.
-            I value clear communication, reliable delivery, and long-term product quality.
-            I enjoy turning ideas into practical software that creates real outcomes.
-          </p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="#projects">Explore projects</a>
-            <a class="btn btn-outline" href="https://github.com/moeez0824-sudo" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
         </div>
-        <div class="hero-side">
-          <aside class="hero-panel reveal" aria-label="Quick profile details">
-            <p class="panel-head">Current Focus</p>
-            <h2 id="rotatingRole">Front-End Engineering</h2>
-            <ul>
-              <li><i class="fa-solid fa-circle-check"></i> Responsive interface systems</li>
-              <li><i class="fa-solid fa-circle-check"></i> AI features and automation</li>
-              <li><i class="fa-solid fa-circle-check"></i> Product-grade development</li>
-            </ul>
-            <div class="stats-grid">
-              <article>
-                <p class="stat-value">9+</p>
-                <p class="stat-label">Completed projects</p>
-              </article>
-              <article>
-                <p class="stat-value">5+</p>
-                <p class="stat-label">Primary languages</p>
-              </article>
-              <article>
-                <p class="stat-value">100%</p>
-                <p class="stat-label">Delivery focus</p>
-              </article>
-            </div>
-          </aside>
+
+        <ul class="focus-list">
+          <li><i class="fa-solid fa-circle-check"></i> Responsive interface systems</li>
+          <li><i class="fa-solid fa-circle-check"></i> AI features and automation</li>
+          <li><i class="fa-solid fa-circle-check"></i> Product-grade development</li>
+        </ul>
+
+        <div class="stats-grid">
+          <article>
+            <p class="stat-value">9+</p>
+            <p class="stat-label">Completed projects</p>
+          </article>
+          <article>
+            <p class="stat-value">5+</p>
+            <p class="stat-label">Primary languages</p>
+          </article>
+          <article>
+            <p class="stat-value">100%</p>
+            <p class="stat-label">Delivery focus</p>
+          </article>
         </div>
-      </div>
+      </aside>
     </section>
 
-    <section class="section section-alt" id="about">
+    <section class="section" id="about">
       <div class="container about-grid">
-        <div class="reveal">
+        <article class="about-story reveal">
           <p class="kicker">About</p>
-          <h2>A practical builder with a design-first mindset.</h2>
-          <p class="section-text about-justified">
-            I turn ideas into production-ready software with attention to maintainability, performance, and visual quality. I enjoy collaborating with teams, refining details, and shipping work that users actually value.
+          <h2>A practical builder with a design first mindset.</h2>
+          <p class="section-text">
+            I turn ideas into production ready software with attention to maintainability, performance, and visual quality. I enjoy collaborating with teams, refining details, and shipping work that users actually value.
             I translate business goals into clear technical plans that reduce risk and speed up delivery.
             My workflow emphasizes testing, documentation, and iterative improvements from real user feedback.
             I care about building products that are stable today and easier to evolve tomorrow.
           </p>
-        </div>
+        </article>
 
-        <div class="about-cards reveal">
+        <div class="about-points reveal">
           <article>
             <h3>Execution</h3>
             <p>From brief to delivery with structured milestones and reliable implementation.</p>
           </article>
           <article>
             <h3>Quality</h3>
-            <p>Clean code, clear naming, and component-driven systems for long-term growth.</p>
+            <p>Clean code, clear naming, and component based systems for long term growth.</p>
           </article>
           <article>
             <h3>Communication</h3>
@@ -169,7 +143,7 @@
       </div>
     </section>
 
-    <section class="section" id="skills">
+    <section class="section section-dark" id="skills">
       <div class="container">
         <div class="section-head reveal">
           <p class="kicker">Skills</p>
@@ -213,62 +187,66 @@
       </div>
     </section>
 
-    <section class="section section-alt" id="projects">
+    <section class="section" id="projects">
       <div class="container">
         <div class="section-head reveal">
           <p class="kicker">Projects</p>
           <h2>Featured Work</h2>
         </div>
+
         <div class="project-grid-strict">
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Bitespot</div>
             <div class="project-tech-strict">HTML, CSS, JS Based</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Restaurant Order System</div>
             <div class="project-tech-strict">JDBC Based</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Loan Simulator App</div>
             <div class="project-tech-strict">Flutter Based</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Voice Appointment Booking</div>
             <div class="project-tech-strict">n8n, Automation</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Contact Book</div>
             <div class="project-tech-strict">Java Based</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Hugging Face Multimodal App</div>
             <div class="project-tech-strict">AI, Hugging Face</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Object detection system</div>
             <div class="project-tech-strict">Computer Vision, Python</div>
           </div>
-          <div class="project-box-strict">
+          <div class="project-box-strict reveal">
             <div class="project-title">Vehicle monitoring system</div>
             <div class="project-tech-strict">IoT, Real-time Data</div>
-            </div>
-            <div class="project-box-strict">
-              <div class="project-title">Mian & Sons Hardware Store</div>
-              <div class="project-tech-strict">Real time project</div>
-            </div>
+          </div>
+          <div class="project-box-strict reveal">
+            <div class="project-title">Mian & Sons Hardware Store</div>
+            <div class="project-tech-strict">Real time project</div>
+          </div>
         </div>
-        <p class="project-github-link-strict">
+
+        <p class="project-github-link-strict reveal">
           If you want to view these projects click here: <a href="https://github.com/moeez0824-sudo" target="_blank" rel="noopener noreferrer">https://github.com/moeez0824-sudo</a>
         </p>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section class="section section-contact" id="contact">
       <div class="container">
         <div class="contact-panel reveal">
-          <p class="kicker">Contact</p>
-          <h2>Open to internships, freelance, and full-time roles.</h2>
-          <p class="section-text">If you have a project idea or a role in mind, send a message and I will respond quickly.</p>
+          <div>
+            <p class="kicker">Contact</p>
+            <h2>Open to internships, freelance, and full-time roles.</h2>
+            <p class="section-text">If you have a project idea or a role in mind, send a message and I will respond quickly.</p>
+          </div>
           <div class="contact-links">
             <a href="mailto:moeez0824@gmail.com"><i class="fa-solid fa-envelope"></i> moeez0824@gmail.com</a>
             <a href="https://github.com/moeez0824-sudo" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> moeez0824-sudo</a>
@@ -285,6 +263,10 @@
       <p><span id="year"></span> All rights reserved</p>
     </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Scroll back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
 
   <script src="script.js"></script>
 </body>

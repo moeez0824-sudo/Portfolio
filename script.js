@@ -6,6 +6,8 @@ const sections = document.querySelectorAll('main section[id]');
 const revealItems = document.querySelectorAll('.reveal');
 const rotatingRole = document.getElementById('rotatingRole');
 const year = document.getElementById('year');
+const scrollProgress = document.getElementById('scrollProgress');
+const backToTop = document.getElementById('backToTop');
 
 const roles = [
   'Front-End Engineering',
@@ -22,6 +24,24 @@ const updateHeaderState = () => {
   }
 
   header.classList.toggle('scrolled', window.scrollY > 14);
+};
+
+const updateScrollProgress = () => {
+  if (!scrollProgress) {
+    return;
+  }
+
+  const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  scrollProgress.style.width = `${Math.min(Math.max(progress, 0), 100)}%`;
+};
+
+const updateBackToTopState = () => {
+  if (!backToTop) {
+    return;
+  }
+
+  backToTop.classList.toggle('visible', window.scrollY > 380);
 };
 
 const updateActiveSection = () => {
@@ -52,6 +72,25 @@ if (menuToggle && menuLinks) {
       menuToggle.setAttribute('aria-expanded', 'false');
     });
   });
+
+  document.addEventListener('click', (event) => {
+    const clickTarget = event.target;
+    if (!(clickTarget instanceof Element)) {
+      return;
+    }
+
+    if (!menuLinks.contains(clickTarget) && !menuToggle.contains(clickTarget)) {
+      menuLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      menuLinks.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
 
 const revealObserver = new IntersectionObserver(
@@ -71,7 +110,8 @@ const revealObserver = new IntersectionObserver(
   }
 );
 
-revealItems.forEach((item) => {
+Array.from(revealItems).forEach((item, itemIndex) => {
+  item.style.transitionDelay = `${Math.min(itemIndex * 40, 300)}ms`;
   revealObserver.observe(item);
 });
 
@@ -86,10 +126,23 @@ if (year) {
   year.textContent = new Date().getFullYear();
 }
 
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  });
+}
+
 window.addEventListener('scroll', () => {
   updateHeaderState();
   updateActiveSection();
+  updateScrollProgress();
+  updateBackToTopState();
 });
 
 updateHeaderState();
 updateActiveSection();
+updateScrollProgress();
+updateBackToTopState();
